@@ -1,32 +1,38 @@
 {
   "private": true,
-  "displayName": "Plugin Name",
-  "name": "homebridge-plugin-name",
+  "displayName": "sp108e led strip control",
+  "name": "homebridge-sp108e-led",
   "version": "1.0.0",
   "description": "A short description about what your plugin does.",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/USERNAME/GITHUB_PROJECT_NAME.git"
+    "url": "git://github.com/flygomel/homebridge-sp108e-led.git"
   },
   "bugs": {
-    "url": "https://github.com/USERNAME/GITHUB_PROJECT_NAME/issues"
+    "url": "https://github.com/flygomel/homebridge-sp108e-led/issues"
   },
   "engines": {
     "node": ">=10.17.0",
     "homebridge": ">0.4.53"
   },
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "scripts": {
     "lint": "eslint src/**.ts",
     "watch": "npm run build && npm link && nodemon",
-    "build": "rimraf ./dist && tsc",
     "prepublishOnly": "npm run lint && npm run build"
   },
   "keywords": [
     "homebridge-plugin"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "color-converter": "^1.4.1",
+    "color-temperature": "^0.2.7",
+    "gradient-color": "^2.0.1",
+    "node-fetch": "^2.6.0",
+    "promise-socket": "^7.0.0",
+    "tinygradient": "^1.1.2"
+  },
   "devDependencies": {
     "@types/node": "^14.0.27",
     "@typescript-eslint/eslint-plugin": "^3.9.0",
